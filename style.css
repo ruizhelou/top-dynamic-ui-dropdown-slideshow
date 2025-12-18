@@ -1,0 +1,99 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 1rem;
+
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: red; */
+}
+
+.slideshow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 900px;
+}
+
+.current-slide {
+    /* width: 900px; */
+}
+
+.current-slide > img {
+    width: 100%;
+}
+
+img:not(.show) {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    height: 100%;
+    width: 150px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.5s ease-in-out;
+    border-style: none;
+    display: flex;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    opacity: 1;
+}
+
+.prev-btn {
+    background: linear-gradient(to left, rgba(255, 0, 0, 0), rgba(0, 0, 0, 1));
+    left: 0px;
+}
+
+.next-btn {
+    background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(0, 0, 0, 1));
+    right: 0px;
+}
+
+.prev-btn > img, .next-btn > img {
+    width: 80px;
+    display: block;
+}
+
+.prev-btn > img {
+    margin-right: auto;
+}
+.next-btn > img {
+    margin-left: auto;
+}
+
+.navigation {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-circle {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    opacity: 0.3;
+
+    border-color: gray;
+    border-width: 3px;
+    border-radius: 50%;
+    border-style: solid;
+}
+
+.nav-circle:hover {
+    box-shadow: 0px 0px 10px 4px gray;
+    cursor: pointer;
+}
+
+.selected {
+    opacity: 1;
+}
